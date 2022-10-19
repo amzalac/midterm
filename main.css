@@ -1,0 +1,102 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+html {
+    overflow-y: hidden;
+}
+body {
+    margin-bottom: 1em;
+}
+#nav-menu {
+    background-color: #7ce271;
+    display: block;
+    padding: 0.75em;
+}
+#nav-menu h3 {
+    display: inline;
+    font-size: 25px;
+    font-family: 'Nunito', sans-serif;
+    margin-right: 0.5em;
+    background-color: white;
+    border-radius: 5%;
+    padding: 0.1em
+}
+#nav-menu h3:hover {
+    background-color: rgb(233, 233, 233);
+}
+#grid-container {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 28% 28% 28%;
+    grid-template-rows: 40% 40%;
+    justify-content: center;
+    overflow-y: scroll;
+    margin-bottom: 1em;
+}
+#left-upper, #middle-upper, #right-upper, #left-lower, #middle-lower, #right-lower {
+    border: 3px solid rgb(142, 142, 227);
+    margin-top: 1em;
+    position: relative;
+}
+#left-upper:hover, #middle-upper:hover, #right-upper:hover, #left-lower:hover, #middle-lower:hover, #right-lower:hover {
+    background-color: rgb(223, 223, 223);
+    box-shadow: 4px 8px #888888;
+}
+#left-upper, #left-lower {
+    margin-right: 1em;
+}
+#right-upper, #right-lower {
+    margin-left: 1em;
+}
+#grid-container img {
+    width: 220px;
+}
+.div-content {
+    font-size: 20px;
+    font-family: 'Nunito', sans-serif;
+}
+.content {
+    margin: 1em;
+    padding: 1em;
+    border: 5px solid rgb(142, 142, 227);
+    border-radius: 5px;
+    font-family: 'Nunito', sans-serif;
+}
+.content img {
+    border: 3px solid gray;
+}
+.content h1, .content h2, .content h3, .content h4 {
+    margin-bottom: 1em;
+}
+    
+@media screen and (max-width: 1000px) {
+    #grid-container {
+        grid-template-columns: 35% 35%;
+        grid-template-rows: 40% 40% 40%;
+        justify-content: center;
+    }
+    #grid-container div {
+        margin-left: 1em;
+    }
+    #right-lower {
+        margin-bottom: 1em;
+    }
+    .div-content {
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 750px) {
+    #grid-container {
+        grid-template-columns: 80%;
+        grid-template-rows: 40% 40% 40% 40% 40% 40%;
+        justify-content: center;
+    }
+    #right-lower {
+        margin-bottom: 1em;
+    }
+    .div-content {
+        font-size: 15px;
+    }
+}
